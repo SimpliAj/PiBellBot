@@ -3,44 +3,45 @@ import time
 import requests
 import yaml
 
-# Konfigurationsdatei laden
+# Load configuration file
 with open("config.yml", "r") as ymlfile:
     config = yaml.safe_load(ymlfile)
 
 API_TOKEN = config['telegram']['api_token']
 CHAT_ID = config['telegram']['chat_id']
 
-# Nachrichten aus der Konfiguration laden
-messages = config['messages']
+# Load both print and Telegram messages from the configuration
+print_messages = config['print_messages']
+telegram_messages = config['telegram_messages']
 
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{API_TOKEN}/sendMessage'
     data = {'chat_id': CHAT_ID, 'text': message}
     response = requests.post(url, data=data)
     if response.status_code == 200:
-        print(f"Nachricht erfolgreich gesendet: {message}")
+        print(f"Telegram message sent: {message}")
     else:
-        print(f"Fehler beim Senden der Nachricht: {response.status_code}")
+        print(f"Failed to send Telegram message. Status code: {response.status_code}")
 
-# GPIO Setup
-GPIO.setmode(GPIO.BCM)  # Verwende BCM-Nummerierung
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # GPIO-Pin 17 als Eingang
+# GPIO setup
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-# System gestartet Nachricht
-print(messages['system_start'])
-send_telegram_message(messages['system_start'])
+# Print start message and send start Telegram message
+print(print_messages['system_start'])
+send_telegram_message(telegram_messages['system_start'])
 
 try:
     while True:
-        if GPIO.input(17) == GPIO.HIGH:  # Wenn der Pin auf High geht (Schaltkontakt geschlossen)
-            print(messages['doorbell_ring'])
-            send_telegram_message(messages['doorbell_ring'])
-            time.sleep(1)  # Verhindert mehrfaches Auslösen
+        if GPIO.input(17) == GPIO.HIGH:
+            print(print_messages['doorbell_ring'])
+            send_telegram_message(telegram_messages['doorbell_ring'])
+            time.sleep(1)  # Prevent multiple triggers
         time.sleep(0.1)
 except KeyboardInterrupt:
-    print("\nProgramm wird beendet...")
-    send_telegram_message(messages['system_shutdown'])
+    print(print_messages['system_shutdown'])
+    send_telegram_message(telegram_messages['system_shutdown'])
 finally:
-    GPIO.cleanup()  # GPIO-Pins zurücksetzen
-    print(messages['gpio_cleanup'])
-    send_telegram_message(messages['gpio_cleanup'])
+    GPIO.cleanup()
+    print(print_messages['gpio_cleanup'])
+    send_telegram_message(telegram_messages['gpio_cleanup'])
