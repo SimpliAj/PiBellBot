@@ -1,3 +1,9 @@
 telegram:
   api_token: ''
   chat_id: ''
+
+messages:
+  system_start: "System gestartet und bereit, Klingelsignale zu empfangen."
+  doorbell_ring: "Jemand hat an der Tür geklingelt!"
+  system_shutdown: "Das System wird gestoppt."
+  gpio_cleanup: "GPIO-Pins wurden zurückgesetzt und das System wurde gestoppt."
