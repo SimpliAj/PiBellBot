@@ -109,7 +109,8 @@ telegram_messages:
 ## Future Updates:
 - [ ] /help command - shows all commands the bot has
 - [ ] /lr command - sends message when last time doorbell was pressed
-- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages [W.I.P Branch](https://github.com/SimpliAj/PiBellBot/tree/multiple_chat_ids)
+- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
+- [W.I.P Branch](https://github.com/SimpliAj/PiBellBot/tree/multiple_chat_ids)
 
 ## License
 
