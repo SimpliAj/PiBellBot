@@ -3,10 +3,10 @@ telegram:
   chat_id: 'YOUR_CHAT_ID'
 
 print_messages:
-  system_start: "System started and waiting for the doorbell signal."
-  doorbell_ring: "Doorbell was pressed!"
-  system_shutdown: "System is shutting down..."
-  gpio_cleanup: "GPIO cleanup done and system is stopped."
+  system_start_print: "System started and waiting for the doorbell signal."
+  doorbell_ring_print: "Doorbell was pressed!"
+  system_shutdown_print: "System is shutting down..."
+  gpio_cleanup_print: "GPIO cleanup done and system is stopped."
 
 telegram_messages:
   system_start: "The doorbell notification system is online."
