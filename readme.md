@@ -1,4 +1,4 @@
-# Raspberry Pi Doorbell to Telegram Message 
+# Raspberry Pi: Doorbell Ring to Telegram Message 
 
 This project allows you to connect a physical doorbell to a Raspberry Pi and send a notification to a Telegram chat when the doorbell is pressed. It's a simple and effective way to integrate your doorbell with a messaging platform for real-time notifications.
 
