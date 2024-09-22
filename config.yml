@@ -1,9 +1,9 @@
 telegram:
-  api_token: ''
-  chat_id: ''
+  api_token: 'YOUR_BOT_API_KEY'
+  chat_id: 'YOUR_CHAT_ID'
 
 messages:
-  system_start: "System gestartet und bereit, Klingelsignale zu empfangen."
-  doorbell_ring: "Jemand hat an der Tür geklingelt!"
-  system_shutdown: "Das System wird gestoppt."
-  gpio_cleanup: "GPIO-Pins wurden zurückgesetzt und das System wurde gestoppt."
+  system_start: "System started and ready to receive doorbell signals."
+  doorbell_ring: "Someone rang the doorbell!"
+  system_shutdown: "The system is shutting down."
+  gpio_cleanup: "GPIO pins have been reset and the system has stopped."
