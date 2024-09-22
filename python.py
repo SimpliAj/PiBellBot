@@ -4,7 +4,6 @@ import requests
 import yaml
 from datetime import datetime
 
-
 # Load configuration file
 with open("config.yml", "r") as ymlfile:
     config = yaml.safe_load(ymlfile)
@@ -16,34 +15,43 @@ CHAT_ID = config['telegram']['chat_id']
 print_messages = config['print_messages']
 telegram_messages = config['telegram_messages']
 
+# Check if command-line prints are enabled
+enable_cmd_prints = config['settings'].get('enable_cmd_prints', True)  # Default to True if not set
+
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{API_TOKEN}/sendMessage'
     data = {'chat_id': CHAT_ID, 'text': message}
     response = requests.post(url, data=data)
     if response.status_code == 200:
-        print(f"Telegram message sent: {message}")
+        if enable_cmd_prints:
+            print(f"Telegram message sent: {message}")
     else:
-        print(f"Failed to send Telegram message. Status code: {response.status_code}")
+        if enable_cmd_prints:
+            print(f"Failed to send Telegram message. Status code: {response.status_code}")
 
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 # Print start message and send start Telegram message
-print(print_messages['system_start_print'])
+if enable_cmd_prints:
+    print(print_messages['system_start_print'])
 send_telegram_message(telegram_messages['system_start'])
 
 try:
     while True:
         if GPIO.input(17) == GPIO.HIGH:
-            print(print_messages['doorbell_ring_print'])
+            if enable_cmd_prints:
+                print(print_messages['doorbell_ring_print'])
             send_telegram_message(telegram_messages['doorbell_ring'])
             time.sleep(1)  # Prevent multiple triggers
         time.sleep(0.1)
 except KeyboardInterrupt:
-    print(print_messages['system_shutdown_print'])
+    if enable_cmd_prints:
+        print(print_messages['system_shutdown_print'])
     send_telegram_message(telegram_messages['system_shutdown'])
 finally:
     GPIO.cleanup()
-    print(print_messages['gpio_cleanup_print'])
+    if enable_cmd_prints:
+        print(print_messages['gpio_cleanup_print'])
     send_telegram_message(telegram_messages['gpio_cleanup'])
