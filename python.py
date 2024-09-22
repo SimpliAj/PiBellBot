@@ -15,6 +15,9 @@ CHAT_ID = config['telegram']['chat_id']
 print_messages = config['print_messages']
 telegram_messages = config['telegram_messages']
 
+# Load GPIO pin number from config
+gpio_pin = config['settings'].get('gpio_pin', 17)  # Default to pin 17 if not set
+
 # Check if command-line prints are enabled
 enable_cmd_prints = config['settings'].get('enable_cmd_prints', True)  # Default to True if not set
 log_telegram_send = config['settings'].get('log_telegram_send', True)  # Default to True if not set
@@ -32,7 +35,7 @@ def send_telegram_message(message):
 
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(gpio_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)  # Use GPIO pin from config
 
 # Print start message and send start Telegram message
 if enable_cmd_prints:
@@ -41,7 +44,7 @@ send_telegram_message(telegram_messages['system_start'])
 
 try:
     while True:
-        if GPIO.input(17) == GPIO.HIGH:
+        if GPIO.input(gpio_pin) == GPIO.HIGH:
             if enable_cmd_prints:
                 print(print_messages['doorbell_ring_print'])
             send_telegram_message(telegram_messages['doorbell_ring'])
