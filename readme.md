@@ -79,10 +79,14 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
 ## Example Config (`config.yml`)
 
 ```yaml
+settings:
+  enable_cmd_prints: false  # Toggle to enable/disable console prints
+  log_telegram_send: false  # Toggle to enable/disable logging Telegram message send status
+  gpio_pin: 17  # Define the GPIO pin number here
+
 telegram:
   api_token: 'YOUR_BOT_API_KEY'
   chat_id: 'YOUR_CHAT_ID'
-
 
 print_messages:
   system_start: "System started and waiting for the doorbell signal."
