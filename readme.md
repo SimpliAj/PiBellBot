@@ -4,7 +4,7 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
 
 <p align="center">
   <a href="https://github.com/EbookFoundation/free-programming-books/stargazers">
-    <img src="https://img.shields.io/github/stars/SimpliAj/CFX-Status-BOT?style=flat&logo=github&logoColor=whitesmoke&label=Stars" alt="GitHub repo stars" />
+    <img src="https://img.shields.io/github/stars/SimpliAj/PiBellBot?style=flat&logo=github&logoColor=whitesmoke&label=Stars" alt="GitHub repo stars" />
   </a>
 </p>
 <p align="center">
