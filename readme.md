@@ -99,7 +99,7 @@ telegram_messages:
 
 ## Future Updates:
 - [ ] Command to check when last time someone rang on door
-- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
+- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages [W.I.P Branch](https://github.com/SimpliAj/PiBellBot/tree/multiple_chat_ids)
 
 ## License
 
