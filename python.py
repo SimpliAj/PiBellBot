@@ -2,6 +2,8 @@ import RPi.GPIO as GPIO
 import time
 import requests
 import yaml
+from datetime import datetime
+
 
 # Load configuration file
 with open("config.yml", "r") as ymlfile:
@@ -28,20 +30,20 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 # Print start message and send start Telegram message
-print(print_messages['system_start'])
+print(print_messages['system_start_print'])
 send_telegram_message(telegram_messages['system_start'])
 
 try:
     while True:
         if GPIO.input(17) == GPIO.HIGH:
-            print(print_messages['doorbell_ring'])
+            print(print_messages['doorbell_ring_print'])
             send_telegram_message(telegram_messages['doorbell_ring'])
             time.sleep(1)  # Prevent multiple triggers
         time.sleep(0.1)
 except KeyboardInterrupt:
-    print(print_messages['system_shutdown'])
+    print(print_messages['system_shutdown_print'])
     send_telegram_message(telegram_messages['system_shutdown'])
 finally:
     GPIO.cleanup()
-    print(print_messages['gpio_cleanup'])
+    print(print_messages['gpio_cleanup_print'])
     send_telegram_message(telegram_messages['gpio_cleanup'])
