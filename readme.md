@@ -97,6 +97,9 @@ telegram_messages:
   gpio_cleanup: "ℹ️ Wichtige Information\n\nDas System wurde heruntergefahren."
 ```
 
+## Future Updates:
+ - Command to check when last time someone rang on door
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
