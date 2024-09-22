@@ -17,16 +17,17 @@ telegram_messages = config['telegram_messages']
 
 # Check if command-line prints are enabled
 enable_cmd_prints = config['settings'].get('enable_cmd_prints', True)  # Default to True if not set
+log_telegram_send = config['settings'].get('log_telegram_send', True)  # Default to True if not set
 
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{API_TOKEN}/sendMessage'
     data = {'chat_id': CHAT_ID, 'text': message}
     response = requests.post(url, data=data)
-    if response.status_code == 200:
-        if enable_cmd_prints:
+    
+    if log_telegram_send:
+        if response.status_code == 200:
             print(f"Telegram message sent: {message}")
-    else:
-        if enable_cmd_prints:
+        else:
             print(f"Failed to send Telegram message. Status code: {response.status_code}")
 
 # GPIO setup
