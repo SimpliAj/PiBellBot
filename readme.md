@@ -3,10 +3,13 @@
 This project allows you to connect a physical doorbell to a Raspberry Pi and send a notification to a Telegram chat when the doorbell is pressed. It's a simple and effective way to integrate your doorbell with a messaging platform for real-time notifications.
 
 <p align="center">
+  <a href="https://github.com/EbookFoundation/free-programming-books/stargazers">
+    <img src="https://img.shields.io/github/stars/SimpliAj/CFX-Status-BOT?style=flat&logo=github&logoColor=whitesmoke&label=Stars" alt="GitHub repo stars" />
+  </a>
+</p>
+<p align="center">
   <img src="https://i.imgur.com/PalLh0Y.png" alt="PiBellBot Logo" width="250"/>
 </p>
-
-
 
 ## Requirements
 
