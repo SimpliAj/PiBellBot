@@ -98,8 +98,8 @@ telegram_messages:
 ```
 
 ## Future Updates:
-- [ ]Command to check when last time someone rang on door
-- [ ]Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
+- [ ] Command to check when last time someone rang on door
+- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
 
 ## License
 
