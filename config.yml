@@ -3,7 +3,8 @@ telegram:
   chat_id: 'YOUR_CHAT_ID'
 
 settings:
-  enable_cmd_prints: true
+  enable_cmd_prints: true  # Toggle to enable/disable console prints
+  log_telegram_send: true  # Toggle to enable/disable logging Telegram message send status
 
 print_messages:
   system_start_print: "System started and waiting for the doorbell signal."
