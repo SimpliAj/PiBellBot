@@ -98,8 +98,10 @@ telegram_messages:
 ```
 
 ## Future Updates:
-- [ ] Command to check when last time someone rang on door
-- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
+- [ ] /help command - shows all commands the bot has
+- [ ] /lr command - sends message when last time doorbell was pressed
+- [ ] Some way to detect CHAT_ID by the bot on first message with reply that you got added to CHAT_ID List, so multiple people in a household can get the bot messages [W.I.P Branch](https://github.com/SimpliAj/PiBellBot/tree/multiple_chat_ids)
+- [ ] /unsub command - to get removed from the CHAT_ID List
 
 ## License
 
