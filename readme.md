@@ -7,8 +7,8 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
 </p>
 <p align="center">
   <a href="https://github.com/EbookFoundation/free-programming-books/stargazers">
-    <img src="https://img.shields.io/github/forks/SimpliAj/PiBellBot?style=flat&logo=github&logoColor=whitesmoke&label=Forks" alt="GitHub repo stars" />
-    <img src="https://img.shields.io/github/stars/SimpliAj/PiBellBot?style=flat&logo=github&logoColor=whitesmoke&label=Stars" alt="GitHub repo stars" />
+    <img src="https://img.shields.io/github/forks/SimpliAj/PiBellBot?style=flat&logo=github&logoColor=whitesmoke&label=Forks" alt="GitHub repo stars"/>
+    <img src="https://img.shields.io/github/stars/SimpliAj/PiBellBot?style=flat&logo=github&logoColor=whitesmoke&label=Stars" alt="GitHub repo stars"/>
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge" width="90"  height="20"/>
   </a>
 </p>
