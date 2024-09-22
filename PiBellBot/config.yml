@@ -1,0 +1,21 @@
+telegram:
+  api_token: 'YOUR_BOT_API_KEY'
+  chat_id: 'YOUR_CHAT_ID'
+
+settings:
+  enable_cmd_prints: true  # Toggle to enable/disable console prints
+  log_telegram_send: true  # Toggle to enable/disable logging Telegram message send status
+  gpio_pin: 17  # Define the GPIO pin number here
+
+
+print_messages:
+  system_start_print: "System started and waiting for the doorbell signal."
+  doorbell_ring_print: "Doorbell was pressed!"
+  system_shutdown_print: "System is shutting down..."
+  gpio_cleanup_print: "GPIO cleanup done and system is stopped."
+
+telegram_messages:
+  system_start: "The doorbell notification system is online."
+  doorbell_ring: "Someone is at the door!"
+  system_shutdown: "The doorbell notification system is being turned off."
+  gpio_cleanup: "The system has been shut down and cleaned up."
