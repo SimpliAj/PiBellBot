@@ -2,6 +2,9 @@ telegram:
   api_token: 'YOUR_BOT_API_KEY'
   chat_id: 'YOUR_CHAT_ID'
 
+settings:
+  enable_cmd_prints: true
+
 print_messages:
   system_start_print: "System started and waiting for the doorbell signal."
   doorbell_ring_print: "Doorbell was pressed!"
