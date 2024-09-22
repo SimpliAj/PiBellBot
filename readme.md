@@ -60,11 +60,11 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
 4. **Edit Configurable Messages**:
    - You can modify the messages that are sent when the system starts, when the doorbell is pressed, or when the system is stopped. These are located in the `config.yml` file under `messages`:
      ```yaml
-     messages:
-       system_start: "System started and ready to receive doorbell signals."
-       doorbell_ring: "Someone rang the doorbell!"
-       system_shutdown: "The system is shutting down."
-       gpio_cleanup: "GPIO pins have been reset and the system has stopped."
+      telegram_messages:
+        system_start: "The doorbell notification system is online."
+        doorbell_ring: "Someone is at the door!"
+        system_shutdown: "The doorbell notification system is being turned off."
+        gpio_cleanup: "The system has been shut down and cleaned up."
      ```
 
 ## Running the Script
@@ -83,11 +83,18 @@ telegram:
   api_token: 'YOUR_BOT_API_KEY'
   chat_id: 'YOUR_CHAT_ID'
 
-messages:
-  system_start: "System started and ready to receive doorbell signals."
-  doorbell_ring: "Someone rang the doorbell!"
-  system_shutdown: "The system is shutting down."
-  gpio_cleanup: "GPIO pins have been reset and the system has stopped."
+
+print_messages:
+  system_start: "System started and waiting for the doorbell signal."
+  doorbell_ring: "Doorbell was pressed!"
+  system_shutdown: "System is shutting down..."
+  gpio_cleanup: "GPIO cleanup done and system is stopped."
+
+telegram_messages:
+  system_start: "ℹ️ Wichtige Information\n\nDas Klingel System wurde gestartet!"
+  doorbell_ring: "💥 Wichtige Information 💥\n\nEs wurde an der Türe geklingelt!"
+  system_shutdown: "ℹ️ Wichtige Information\n\nDas System schaltet sich aus!"
+  gpio_cleanup: "ℹ️ Wichtige Information\n\nDas System wurde heruntergefahren."
 ```
 
 ## License
