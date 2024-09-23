@@ -116,3 +116,10 @@ telegram_messages:
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+
+<div align="center">
+  <a href="https://info.flagcounter.com/VcTZ">
+    <img src="https://s11.flagcounter.com/mini/VcTZ/bg_151f2e/txt_71cfff/border_000000/flags_0/" alt="Flag Counter" border="0">
+  </a>
+</div>
