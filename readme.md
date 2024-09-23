@@ -102,10 +102,10 @@ print_messages:
   gpio_cleanup: "GPIO cleanup done and system is stopped."
 
 telegram_messages:
-  system_start: "ℹ️ Wichtige Information\n\nDas Klingel System wurde gestartet!"
-  doorbell_ring: "💥 Wichtige Information 💥\n\nEs wurde an der Türe geklingelt!"
-  system_shutdown: "ℹ️ Wichtige Information\n\nDas System schaltet sich aus!"
-  gpio_cleanup: "ℹ️ Wichtige Information\n\nDas System wurde heruntergefahren."
+  system_start: "ℹ️ Important Information\n\nThe doorbell system has started!"
+  doorbell_ring: "💥 Important Information 💥\n\nThe doorbell has rung!"
+  system_shutdown: "ℹ️ Important Information\n\nThe system is shutting down!"
+  gpio_cleanup: "ℹ️ Important Information\n\nThe system has been powered off."
 ```
 
 ## Future Updates:
