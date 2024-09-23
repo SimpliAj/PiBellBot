@@ -107,13 +107,15 @@ telegram_messages:
   system_shutdown: "ℹ️ Important Information\n\nThe system is shutting down!"
   gpio_cleanup: "ℹ️ Important Information\n\nThe system has been powered off."
 ```
-
-## Future Updates:
+## TO DO:
 - [ ] /help command - shows all commands the bot has
 - [ ] /lr command - sends message when last time doorbell was pressed
-- [ ] Some way to detect CHAT_ID by the bot on message, so multiple people in a household can get the bot messages
+- [ ] Add a way to use /setup command to get CHAT_ID by the bot and store it locally, so multiple people in a household can get the bot messages
+- [ ] Add a way to get removed from the CHAT_ID list
 - [W.I.P Branch](https://github.com/SimpliAj/PiBellBot/tree/multiple_chat_ids)
 
+## Future Updates:
+- TBC
 
 ## License
 
