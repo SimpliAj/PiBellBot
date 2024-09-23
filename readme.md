@@ -10,7 +10,7 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
   </a>
 </p>
 <p align="center">
-  <img src="https://i.imgur.com/YPBs6Jx.png" alt="PiBellBot Logo" width="250"/>
+  <img src="https://i.imgur.com/Lgy4a8N.png" alt="PiBellBot Logo" width="250"/>
   <br><a href="https://discord.gg/dRjXvWcbsM">Discord Server</a>
 </p>
 
