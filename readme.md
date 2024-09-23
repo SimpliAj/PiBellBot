@@ -11,7 +11,6 @@ This project allows you to connect a physical doorbell to a Raspberry Pi and sen
 </p>
 <p align="center">
   <img src="https://i.imgur.com/Lgy4a8N.png" alt="PiBellBot Logo" width="250"/>
-  <br><a href="https://discord.gg/dRjXvWcbsM">Discord Server</a>
 </p>
 
 
@@ -117,6 +116,9 @@ telegram_messages:
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
+<p align="center">
+  <br><a href="https://discord.gg/dRjXvWcbsM">Discord Server</a>
+</p>
 
 <div align="center">
   <a href="https://info.flagcounter.com/VcTZ">
