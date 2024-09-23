@@ -15,7 +15,8 @@ print_messages:
   gpio_cleanup_print: "GPIO cleanup done and system is stopped."
 
 telegram_messages:
-  system_start: "The doorbell notification system is online."
-  doorbell_ring: "Someone is at the door!"
-  system_shutdown: "The doorbell notification system is being turned off."
-  gpio_cleanup: "The system has been shut down and cleaned up."
+  system_start: "ℹ️ Important Information\n\nThe doorbell system has started!"
+  doorbell_ring: "💥 Important Information 💥\n\nThe doorbell has rung!"
+  system_shutdown: "ℹ️ Important Information\n\nThe system is shutting down!"
+  gpio_cleanup: "ℹ️ Important Information\n\nThe system has been powered off."
+
